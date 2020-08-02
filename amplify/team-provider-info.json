@@ -16,5 +16,23 @@
                 "cognitod90d2b16": {}
             }
         }
+    },
+    "master": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-maolexsample-master-120318-authRole",
+            "UnauthRoleArn": "arn:aws:iam::181571321432:role/amplify-maolexsample-master-120318-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::181571321432:role/amplify-maolexsample-master-120318-authRole",
+            "Region": "us-west-2",
+            "DeploymentBucketName": "amplify-maolexsample-master-120318-deployment",
+            "UnauthRoleName": "amplify-maolexsample-master-120318-unauthRole",
+            "StackName": "amplify-maolexsample-master-120318",
+            "StackId": "arn:aws:cloudformation:us-west-2:181571321432:stack/amplify-maolexsample-master-120318/d4b669c0-d4f2-11ea-b084-06fd04ccb534",
+            "AmplifyAppId": "d3rv7l7vtbixva"
+        },
+        "categories": {
+            "auth": {
+                "cognitod90d2b16": {}
+            }
+        }
     }
 }

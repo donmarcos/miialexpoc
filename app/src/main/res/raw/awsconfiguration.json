@@ -7,7 +7,7 @@
     "CredentialsProvider": {
         "CognitoIdentity": {
             "Default": {
-                "PoolId": "us-west-2:de1cd379-a24d-49bb-9c70-cebce90354ba",
+                "PoolId": "us-west-2:9ec376f0-0f80-48c5-8c03-ad8fa5f0b99c",
                 "Region": "us-west-2"
             }
         }
@@ -18,8 +18,8 @@
         }
     },
     "Lex": {
-        "OrderFlowers_dev": {
-            "Name": "OrderFlowers_dev",
+        "OrderFlowers_master": {
+            "Name": "OrderFlowers_master",
             "Alias": "$LATEST",
             "Region": "us-west-2"
         }
