@@ -1,0 +1,27 @@
+{
+    "UserAgent": "aws-amplify-cli/0.1.0",
+    "Version": "0.1.0",
+    "IdentityManager": {
+        "Default": {}
+    },
+    "CredentialsProvider": {
+        "CognitoIdentity": {
+            "Default": {
+                "PoolId": "us-west-2:de1cd379-a24d-49bb-9c70-cebce90354ba",
+                "Region": "us-west-2"
+            }
+        }
+    },
+    "Auth": {
+        "Default": {
+            "authenticationFlowType": "USER_SRP_AUTH"
+        }
+    },
+    "Lex": {
+        "OrderFlowers_dev": {
+            "Name": "OrderFlowers_dev",
+            "Alias": "$LATEST",
+            "Region": "us-west-2"
+        }
+    }
+}

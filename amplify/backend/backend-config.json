@@ -1,0 +1,15 @@
+{
+	"auth": {
+		"cognitod90d2b16": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation"
+		}
+	},
+	"interactions": {
+		"maoLexsample": {
+			"service": "Lex",
+			"providerPlugin": "awscloudformation",
+			"build": true
+		}
+	}
+}
