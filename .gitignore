@@ -7,7 +7,7 @@
 /build
 /captures
 .externalNativeBuild
-
+*.zip
 #amplify
 amplify/\#current-cloud-backend
 amplify/.config/local-*
