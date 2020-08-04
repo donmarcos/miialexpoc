@@ -1,4 +1,34 @@
 <resources>
     <string name="app_name">Lex Sample</string>
     <string name="screen_options_main_message">Amazon Lex</string>
+    <string name="who_are_you">Who are you?</string>
+    <string name="choose">Choose what describes you best</string>
+    <string name="Caregiver">Caregiver</string>
+    <string name="Patient">Patient</string>
+    <string name="login">Login to your Account</string>
+    <string name="enter_id">Enter_Id_x</string>
+    <string name="enter_id_password">Enter_password_x</string>
+    <string name="Remember">Remember Me</string>
+    <string name="Login1">Login</string>
+    <string name="started">getting started....</string>
+    <string name="signup">Create Your Account</string>
+    <string name="enter_name">Name_X</string>
+    <string name="enter_email">Email_X</string>
+    <string name="enter_phoneNo">Phone_x</string>
+    <string name="gender">Gender:</string>
+    <string name="Male">Male</string>
+    <string name="Female">Female</string>
+    <string name="NotToSay">Prefer Not to say</string>
+    <string name="signup_user">Signup</string>
+    <string name="setting_up_profile">Setting up Your Profile</string>
+    <string name="adding_profile">add your profile photo</string>
+    <string name="set_a_username">set a username</string>
+    <string name="EnterMobileno">Enter your registered Email \nor mobile No.</string>
+    <string name="mobile">Mobile no. or Email Address</string>
+    <string name="submit">Submit</string>
+    <string name="resetpassword">We will send the link to reset password</string>
+    <string name="EnterOtp">Enter the OTP sent to your \nregistered Mobile</string>
+    <string name="verify">Verify</string>
+    <string name="forgot_pasword">Forgot Password?</string>
+    <string name="show_username">username_x</string>
 </resources>
