@@ -1,7 +1,7 @@
 /*
     This is the original build.gradle file in the dev branch.
-    THe buildToolsVersion is also differet. So, I included that entire code in this comment block. We can then decide on what we should keep.
-    
+    THe buildToolsVersion is also differet. So, I included the new code in the next comment block. We can then decide on what we should keep.
+*/    
     apply plugin: 'com.android.application'
 
 android {
@@ -39,7 +39,9 @@ dependencies {
     implementation ("com.amazonaws:aws-android-sdk-lex:$aws_version@aar") { transitive=true }
     implementation ("com.amazonaws:aws-android-sdk-mobile-client:$aws_version@aar") { transitive=true }
 }
-*/
+
+/*
+This is that comment block. THE NEW BUILD.GRADLE FILE
 
 apply plugin: 'com.android.application'
 
@@ -87,3 +89,4 @@ dependencies {
     implementation 'com.amazonaws:aws-android-sdk-core:2.16.13'
 
 }
+*/
