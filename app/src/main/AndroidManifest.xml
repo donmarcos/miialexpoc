@@ -17,6 +17,7 @@
         </activity>
         <activity android:name=".Signup">
             <intent-filter>
+                // MOVE THE FOLLOWING TWO TAGS INSIDE THE ACTIVITY YOU WANT TO LAUNCH ON START-UP. BY DEAULT, THAT IS.
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
