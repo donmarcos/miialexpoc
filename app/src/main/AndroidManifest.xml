@@ -1,41 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.amazonaws.sample.lex">
-
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.RECORD_AUDIO" />
-
-    <application
-        android:name="androidx.multidex.MultiDexApplication"
-        android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
-        android:supportsRtl="true"
-        android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen">
-        <activity android:name=".Login"></activity>
-        <activity
-            android:name=".MainActivity"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".TextActivity" />
-        <activity android:name=".InteractiveVoiceActivity" />
-    </application>
-
-</manifest>
 <!--
-<?xml version="1.0" encoding="utf-8"?>
+    THE ORIGINAL AMPLIFY AND AWS CONFIGURATION FILE CONTEXTS FROM APP/SRC/MAIN/RES/RAW HAVE BEEN STORED IN THE SAME FILE OF THE MIAAEXPLOC PROJECT. DON'T DELETE THAT.
+    THESE ARE THE CONTENTS OF THAT PROJECT'S FILE
+-->
+
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.miiafinal">
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -44,22 +17,21 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".Login">
-
-        </activity>
-        <activity android:name=".Signup">
             <intent-filter>
-                // MOVE THE FOLLOWING TWO TAGS INSIDE THE ACTIVITY YOU WANT TO LAUNCH ON START-UP. BY DEAULT, THAT IS.
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".InteractiveVoiceActivity" />
         <activity android:name=".TextActivity" />
+	    <activity android:name=".Signup">
+        </activity>
+
+        <activity android:name=".InteractiveVoiceActivity" />
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
     </application>
 
 </manifest>
--->
