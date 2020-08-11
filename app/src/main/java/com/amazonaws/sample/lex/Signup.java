@@ -1,4 +1,4 @@
-package com.example.miiafinal;
+package com.amazonaws.sample.lex;
 
 import androidx.appcompat.app.AppCompatActivity;
 
