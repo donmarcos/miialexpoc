@@ -31,4 +31,7 @@
     <string name="verify">Verify</string>
     <string name="forgot_pasword">Forgot Password?</string>
     <string name="show_username">username_x</string>
+    <string name="title_activity_signup" />
+    <string name="previous" />
+    <string name="action_settings" />
 </resources>

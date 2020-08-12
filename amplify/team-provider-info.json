@@ -1,0 +1,20 @@
+{
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-maolexsample-dev-210526-authRole",
+            "UnauthRoleArn": "arn:aws:iam::181571321432:role/amplify-maolexsample-dev-210526-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::181571321432:role/amplify-maolexsample-dev-210526-authRole",
+            "Region": "us-west-2",
+            "DeploymentBucketName": "amplify-maolexsample-dev-210526-deployment",
+            "UnauthRoleName": "amplify-maolexsample-dev-210526-unauthRole",
+            "StackName": "amplify-maolexsample-dev-210526",
+            "StackId": "arn:aws:cloudformation:us-west-2:181571321432:stack/amplify-maolexsample-dev-210526/0f5f58b0-dc51-11ea-9c9a-0a26b22d6f48",
+            "AmplifyAppId": "d33fe8wjqkkes2"
+        },
+        "categories": {
+            "auth": {
+                "cognitod90d2b16": {}
+            }
+        }
+    }
+}

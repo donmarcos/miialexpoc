@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="toolbar" type="id"/>
+    <item name="fab" type="id" />
+    <item name="userInputEditText" type="id" />
+    <item name="conversationListView" type="id" />
+    <item name="signup_layout" type="id" />
+    <item name="username" type="id" />
+    <item name="email" type="id" />
+    <item name="password" type="id" />
+    <item name="phone_number" type="id" />
+    <item name="gender" type="id" />
+</resources>

@@ -27,6 +27,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.amazonaws.sample.lex.R;
+
 public class MainActivity extends Activity implements View.OnClickListener {
     private static final String TAG = "MainActivity";
     private static final int REQUEST_RECORDING_PERMISSIONS_RESULT = 75;
@@ -51,6 +53,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
      */
     private void init() {
         Log.e(TAG, "Initializing app");
+        Log.e(TAG,  BuildConfig.API_URL );
 
         textDemoButton = (Button) findViewById(R.id.button_select_text);
         speechDemoButton = (Button) findViewById(R.id.button_select_voice);
