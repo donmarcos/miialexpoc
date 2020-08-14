@@ -6,8 +6,8 @@
         android:width="@dimen/activity_text_border"
         android:color="@color/text_border_default" />
     <corners
-        android:bottomRightRadius="1dp"
-        android:bottomLeftRadius="1dp"
-        android:topLeftRadius="1dp"
-        android:topRightRadius="1dp"/>
+        android:bottomRightRadius="30dp"
+        android:bottomLeftRadius="30dp"
+        android:topLeftRadius="30dp"
+        android:topRightRadius="30dp"/>
 </shape>

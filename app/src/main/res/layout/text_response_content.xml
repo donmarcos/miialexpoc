@@ -1,33 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
-
-    <EditText
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <ListView
         android:layout_width="match_parent"
-        android:layout_height="@dimen/activity_button_height"
-        android:inputType="text"
-        android:paddingLeft="@dimen/activity_intra_group_separation"
-        android:background="@drawable/border_rounded_1"
-        android:ems="10"
-        android:id="@+id/userInputEditText"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_height="600dp"
+        android:id="@+id/conversationListView"
 
+        android:paddingLeft="@dimen/activity_text_border"
+        android:paddingRight="@dimen/activity_text_border"/>
     <Space
         android:layout_width="match_parent"
         android:layout_height="10dp"
-        android:layout_above="@+id/userInputEditText"
         android:id="@+id/space_1"
-        android:layout_alignParentStart="true" />
-
-    <ListView
+        />
+    <RelativeLayout
+        android:id="@+id/messageInputContainer"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/conversationListView"
-        android:layout_above="@+id/space_1"
-        android:layout_alignParentStart="true"
-        android:paddingLeft="@dimen/activity_text_border"
-        android:paddingRight="@dimen/activity_text_border"/>
+        android:layout_height="48dp"
+        android:layout_margin="6dp"
+        android:layout_marginEnd="12dp"
+        android:background="@drawable/input_background"
+        >
 
-</RelativeLayout>
+
+        <EditText
+            android:id="@+id/userInputEditText"
+            android:layout_marginLeft="20dp"
+            android:layout_toLeftOf="@+id/mike"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:background="@android:color/transparent"
+            android:hint="@string/send" />
+
+    <ImageButton
+
+        android:layout_width="wrap_content"
+        android:background="@null"
+        android:layout_height="match_parent"
+        android:layout_toLeftOf="@+id/send"
+        android:src="@drawable/ic_baseline_mic_none_24"
+        android:id="@+id/mike"
+        />
+
+        <ImageButton
+            android:id="@+id/send"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@null"
+            android:src="@drawable/ic_baseline_send_24"
+            />
+    </RelativeLayout>
+</LinearLayout>
