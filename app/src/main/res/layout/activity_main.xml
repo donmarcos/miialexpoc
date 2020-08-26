@@ -10,6 +10,6 @@
     android:paddingTop="@dimen/activity_intra_group_separation"
     android:background ="#FFFFFF">
 
-    <include layout="@layout/options" />
+    <include layout="@layout/nav_drawer" />
 
 </RelativeLayout>
