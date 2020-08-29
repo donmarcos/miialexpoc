@@ -1,87 +1,157 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:orientation="vertical"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/three_d_box_light">
+
     <TextView
+        android:id="@+id/title"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="70dp"
         android:text="@string/login"
-        android:gravity="center_horizontal"
-        android:layout_marginTop="70dp"
-        android:textSize="34sp"
+        android:gravity="center_horizontal|center_vertical"
+        android:layout_marginTop="0dp"
+        android:textSize="28sp"
+        android:textColor="#fafaff"
+        android:background="@drawable/three_d_box"
         android:textStyle="bold"
-        android:textColor="#070707" />
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_marginTop="80dp"
-        android:layout_marginLeft="40dp"
-        app:boxBackgroundMode="filled"
-        app:boxBackgroundColor="#FFFFFF"
-        app:boxStrokeColor="#06B2BB"
-        app:endIconMode="clear_text"
-        app:startIconDrawable="@drawable/ic_baseline_person_24"
-        app:startIconContentDescription="@string/enter_id_password"
-        android:hint="@string/enter_id"
-        android:layout_marginRight="40dp"
-        android:layout_height="wrap_content">
+        />
+
+    <RelativeLayout
+        android:id="@+id/login_form"
+        android:layout_width="350dp"
+        android:layout_height="275dp"
+        android:layout_below="@id/title"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/three_d_box_light_two"
+        >
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/login_id"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:textColorHint="#000033"
+            android:textColor="#000033"
+            android:paddingStart="20dp"
+            android:paddingEnd="0dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginEnd="20dp"
+            app:endIconMode="clear_text"
+            android:hint="@string/username"
             android:inputType="text"
-            android:maxLines="1">
+            android:textSize="20sp"
+            >
         </com.google.android.material.textfield.TextInputEditText>
-    </com.google.android.material.textfield.TextInputLayout>
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        app:startIconDrawable="@drawable/ic_baseline_person_24"
-        android:layout_marginTop="16dp"
-        android:layout_marginLeft="40dp"
-        app:boxBackgroundMode="filled"
-        app:boxBackgroundColor="#FFFFFF"
-        app:boxStrokeColor="#06B2BB"
-        app:endIconMode="password_toggle"
-        android:hint="@string/enter_id_password"
-        android:layout_marginRight="40dp"
-        android:layout_height="wrap_content"
-        app:errorEnabled="true">
+
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/login_password"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/login_id"
+            android:textColorHint="#000033"
+            android:textColor="#000033"
+            android:paddingStart="20dp"
+            android:paddingEnd="0dp"
+            android:layout_marginTop="16dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginEnd="20dp"
+            app:endIconMode="clear_text"
+            android:hint="@string/enter_id_password"
             android:inputType="textPassword"
-            android:maxLines="1">
+            android:textSize="20sp"
+            >
         </com.google.android.material.textfield.TextInputEditText>
-    </com.google.android.material.textfield.TextInputLayout>
-    <CheckBox
-        android:id="@+id/Remember_checkbox"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/Remember"
-        android:layout_gravity="center_horizontal"/>
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/login_button"
-        android:text="@string/Login1"
-        android:layout_gravity="center_horizontal"
-        android:clickable="true"
-        app:cornerRadius="20dp"
-        android:focusable="true"
-        android:onClick="loginFunction">
-    </Button>
-    <TextView
+
+        <Button
+            android:id="@+id/login_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/login_password"
+            android:text="@string/Login1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:textSize="18sp"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="loginFunction"
+            android:textColor="@color/black"
+            android:background="@android:color/holo_red_light">
+        </Button>
+
+        <TextView
+            android:id="@+id/new_sign_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/login_button"
+            android:layout_centerHorizontal="true"
+            android:text="@string/new_sign_up"
+            android:textAlignment="center"
+            android:layout_marginTop="10dp"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/holo_red_dark"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="goToSignup"/>
+    </RelativeLayout>
+
+    <pl.droidsonroids.gif.GifImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/forgot_pasword"
-        android:gravity="center_horizontal"
-        android:layout_marginTop="40dp"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:textColor="#070707"/>
+        android:layout_marginTop="370dp"
+        android:src="@drawable/revolving_earth"
+        android:padding="0dp"
+        />
+</RelativeLayout>
+<!--    <com.google.android.material.textfield.TextInputLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_marginTop="80dp"-->
+<!--        android:layout_marginLeft="40dp"-->
+<!--        app:boxBackgroundMode="filled"-->
+<!--        app:boxBackgroundColor="#FFFFFF"-->
+<!--        app:boxStrokeColor="#06B2BB"-->
+<!--        app:endIconMode="clear_text"-->
+<!--        app:startIconDrawable="@drawable/ic_baseline_person_24"-->
+<!--        app:startIconContentDescription="@string/enter_id_password"-->
+<!--        android:hint="@string/enter_id"-->
+<!--        android:layout_marginRight="40dp"-->
+<!--        android:layout_height="wrap_content">-->
+<!--        <com.google.android.material.textfield.TextInputEditText-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:inputType="text"-->
+<!--            android:maxLines="1">-->
+<!--        </com.google.android.material.textfield.TextInputEditText>-->
+<!--    </com.google.android.material.textfield.TextInputLayout>-->
+<!--    <com.google.android.material.textfield.TextInputLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        app:startIconDrawable="@drawable/ic_baseline_person_24"-->
+<!--        android:layout_marginTop="16dp"-->
+<!--        android:layout_marginLeft="40dp"-->
+<!--        app:boxBackgroundMode="filled"-->
+<!--        app:boxBackgroundColor="#FFFFFF"-->
+<!--        app:boxStrokeColor="#06B2BB"-->
+<!--        app:endIconMode="password_toggle"-->
+<!--        android:hint="@string/enter_id_password"-->
+<!--        android:layout_marginRight="40dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:errorEnabled="true">-->
+<!--        <com.google.android.material.textfield.TextInputEditText-->
+<!--            android:id="@+id/login_password"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:inputType="textPassword"-->
+<!--            android:maxLines="1">-->
+<!--        </com.google.android.material.textfield.TextInputEditText>-->
+<!--    </com.google.android.material.textfield.TextInputLayout>-->
+<!--    <CheckBox-->
+<!--        android:id="@+id/Remember_checkbox"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="@string/Remember"-->
+<!--        android:layout_gravity="center_horizontal"/>-->
 
-</LinearLayout>
