@@ -3,7 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/app.iml" group="miiaLexPOC/app" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/miiaLexPOC.iml" filepath="$PROJECT_DIR$/.idea/modules/miiaLexPOC.iml" group="miiaLexPOC" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/miialexpoc.iml" filepath="$PROJECT_DIR$/.idea/modules/miialexpoc.iml" group="miialexpoc" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/miialexpoc-app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/miialexpoc-app.iml" group="miialexpoc/app" />
     </modules>
   </component>
 </project>

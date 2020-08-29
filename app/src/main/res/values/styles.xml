@@ -36,4 +36,71 @@
         <item name="cornerFamilyBottomRight">rounded</item>
         <item name="cornerSize">35dp</item>
     </style>
+
+    <style name="TitleText" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:textSize">30sp</item>
+        <item name="android:textStyle">bold</item>
+
+    </style>
+    <style name="Subtitle">
+        <item name="android:textSize">20sp</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+    <style name="CardText" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:textSize">30sp</item>
+        <item name="android:layout_gravity">center</item>
+
+    </style>
+    <style name="WelcomeCard" parent="@style/Widget.MaterialComponents.CardView">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay.MaterialCardView.Cut</item>
+        <item name="cardBackgroundColor">@color/cardBg</item>
+        <item name="backgroundColor">@color/cardBg</item>
+        <item name="android:foregroundTint">@color/cardBg</item>
+    </style>
+
+    <style name="RoleCard" parent="@style/Widget.MaterialComponents.CardView">
+        <item name="cardBackgroundColor">@color/cardBg</item>
+        <item name="backgroundColor">@color/cardBg</item>
+        <item name="android:foregroundTint">@color/cardBg</item>
+    </style>
+
+    <style name="card" parent="@style/Widget.MaterialComponents.CardView">
+        <item name="android:layout_margin">20dp</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.MaterialCardView.Cut" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">0dp</item>
+        <item name="cornerSizeTopLeft">0dp</item>
+        <item name="cornerSizeBottomRight">50dp</item>
+        <item name="cornerSizeBottomLeft">50dp</item>
+    </style>
+
+    <style name="welcomeButton" parent="@style/Widget.MaterialComponents.Button">
+        <item name="cornerRadius">40dp</item>
+        <item name="color">@color/material_on_background_emphasis_medium</item>
+        <item name="android:layout_width">300dp</item>
+        <item name="android:layout_height">5dp</item>
+    </style>
+    <style name="mainButton" parent="@style/Widget.MaterialComponents.Button">
+        <item name="cornerRadius">40dp</item>
+        <item name="color">@color/material_on_background_emphasis_medium</item>
+        <item name="android:layout_height">5dp</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+    </style>
+    <style name="secButton" parent="@style/Widget.MaterialComponents.Button">
+        <item name="cornerRadius">40dp</item>
+        <item name="backgroundTint">@color/secBtnBg</item>
+
+        <item name="android:textColor">@color/secBtnText</item>
+        <item name="android:layout_height">5dp</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+    </style>
+    <style name="button" parent="@style/Widget.MaterialComponents.Button">
+        <item name="cardBackgroundColor">@color/cardBg</item>
+        <item name="backgroundColor">@color/cardBg</item>
+    </style>
+
 </resources>

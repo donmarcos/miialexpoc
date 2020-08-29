@@ -1,5 +1,4 @@
 <resources>
-    <string name="app_name">Lex Sample</string>
     <string name="screen_options_main_message">Amazon Lex</string>
     <string name="who_are_you">Who are you?</string>
     <string name="choose">Choose what describes you best</string>
@@ -34,4 +33,26 @@
     <string name="title_activity_signup" />
     <string name="previous" />
     <string name="action_settings" />
+    <string name="app_name">miia</string>
+    <string name="welcome_title">Welcome to <b>miia</b></string>
+    <string name="welcome_subtitle">You\'re personalized health monitoring\nthat simplifies remote caregiving</string>
+    <string name="welcome_btn">Get started</string>
+    <string name="role_title">Who are you?</string>
+    <string name="role_subtitle">Choose what describes you best</string>
+    <string name="role_caregiver">Caregiver</string>
+    <string name="role_patient">Patient</string>
+    <string name="reg_title">Create your account</string>
+    <string name="reg_subtitle">Enter your details</string>
+    <string name="reg_hint_name">Enter complete name</string>
+    <string name="reg_hint_email">Add email or phone</string>
+    <string name="reg_hint_pw">Set a new password</string>
+    <string name="reg_signin_rmd">Already have an account?</string>
+    <string name="reg_signup">Sign up</string>
+    <string name="reg_signin">Sign in</string>
+    <string name="reg_goback">Go back</string>
+    <string name="signin_title">Welcome back</string>
+    <string name="chooserole_title">Pick a user</string>
+    <string name="chooserole_subtitle">Select a user so we can tailor the app experience based on who you are</string>
+    <string name="role_prev">Back</string>
+    <string name="role_next">Next</string>
 </resources>

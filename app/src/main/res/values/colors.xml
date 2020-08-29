@@ -29,4 +29,11 @@
     <color name="orange">#F78828</color>
     <color name="blue">#06B2BB</color>
     <color name="darkblue">#222266</color>
+    <color name="colorButton">#8866FE</color>
+    <color name="colorMain">#9779FE</color>
+    <color name="cardBg">#FFFFFF</color>
+    <color name="dotDisable">#DED3FF</color>
+    <color name="transparent">#00000000</color>
+    <color name="secBtnBg">#FFFFFF</color>
+    <color name="secBtnText">#555555</color>
 </resources>
