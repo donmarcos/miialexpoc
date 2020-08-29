@@ -16,6 +16,7 @@
 package com.amazonaws.sample.lex;
 
 import android.app.Activity;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
@@ -51,6 +52,9 @@ public class InteractiveVoiceActivity extends Activity
 
     @Override
     public void onBackPressed() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            stopLocalVoiceInteraction();
+        }
         exit();
     }
 
@@ -96,6 +100,7 @@ public class InteractiveVoiceActivity extends Activity
     }
 
     private void exit() {
+
         finish();
     }
 
