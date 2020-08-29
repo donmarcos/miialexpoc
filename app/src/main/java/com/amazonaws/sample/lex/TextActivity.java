@@ -287,7 +287,6 @@ public class TextActivity extends Activity {
             bufferedWriter.close();
             BufferedReader bufferedReader = new BufferedReader(new FileReader(getApplicationContext().getFilesDir().getPath() + "\\data.csv"));
             Log.d("\nLINES IN THE USER FILE", bufferedReader.readLine());
-            getApplicationContext();
             bufferedReader.close();
             
         }
@@ -360,7 +359,7 @@ public class TextActivity extends Activity {
     private void addMessage(final TextMessage message) {
         Conversation.add(message);
         final MessagesListAdapter listAdapter = new MessagesListAdapter(getApplicationContext());
-        final ListView messagesListView = (ListView) findViewById(R.id.conversationListView);
+        final ListView messagesListView = findViewById(R.id.conversationListView);
         messagesListView.setDivider(null);
         messagesListView.setAdapter(listAdapter);
         messagesListView.setSelection(listAdapter.getCount() - 1);
