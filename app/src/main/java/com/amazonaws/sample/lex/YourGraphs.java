@@ -6,6 +6,7 @@ import android.hardware.Sensor;
 import android.hardware.SensorManager;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.RelativeLayout;
@@ -31,9 +32,15 @@ public class YourGraphs extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_your_graphs);
-        String username = AWSMobileClient.getInstance().getUsername();
+//        DOESN'T WORK
+//        String username = AWSMobileClient.getInstance().getUsername();
+
+
+        CognitoSettings cognitoSettings = new CognitoSettings(this);
+//        Log.i("USERNAME IS THIS: ", AWSMobileClient.getInstance().getIdentityId()+ ", " + cognitoSettings.getUserPoolID());
+//        username = String.valueOf(cognitoSettings.getUserPool().getUser());
         title = findViewById(R.id.profile_page_title);
-        title.setText(("Hello " + username));
+        title.setText(("Hello User!"));
 
         ninjaEyes = findViewById(R.id.ninja_eyes);
 

@@ -52,7 +52,6 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.Objects;
 
-import au.com.bytecode.opencsv.CSVWriter;
 
 public class TextActivity extends Activity {
     private static final String TAG = "TextActivity";
