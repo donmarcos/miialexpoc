@@ -63,7 +63,8 @@ dependencies {
     // def android_libs_version = "28.0.0"
     implementation 'androidx.multidex:multidex:2.0.1'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-    implementation project(path: ':openCVLibrary343')
+//    implementation project(path: ':openCVLibrary343')
+    implementation files('libs/libtensorflow-1.14.0.jar')
     // def android_libs_version = "28.0.0"
     //implementation 'androidx.appcompat:appcompat:1.0.0'
     //implementation 'com.google.android.material:material:1.0.0'
@@ -90,8 +91,12 @@ dependencies {
     implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.21'
 
     // For performing read/write operations on the CSV cache file
-    implementation 'net.sf.opencsv:opencsv:2.4'
+//    implementation 'net.sf.opencsv:opencsv:2.4'
+
+    // For implementing the Tensorflow ML model for EyeTracking
+    implementation 'org.tensorflow:tensorflow-lite-task-vision:0.0.0-nightly'
 
     // For the eye_tracking activity
     implementation "com.google.android.gms:play-services:12.0.1"
 }
+
