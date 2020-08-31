@@ -10,7 +10,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
         <com.google.android.material.card.MaterialCardView
-            style="@style/WelcomeCard"
+            style="@style/AllCard"
             android:id="@+id/welcome_card_inner"
             android:clickable="false"
             android:focusable="true"
@@ -142,7 +142,8 @@
             android:layout_marginBottom="50dp"
             android:layout_weight="0.1"
             android:text="@string/welcome_btn"
-            android:textColor="@color/material_on_primary_emphasis_high_type" />
+            android:textColor="@color/white"
+            app:backgroundTint="@color/colorButton"/>
 
 
 
