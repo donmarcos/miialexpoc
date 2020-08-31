@@ -68,7 +68,7 @@
         <item name="android:layout_margin">20dp</item>
     </style>
 
-    <style name="ShapeAppearanceOverlay.MaterialCardView.Cut" parent="">
+    <style name="cardCorner" parent="">
         <item name="cornerFamily">rounded</item>
         <item name="cornerSizeTopRight">0dp</item>
         <item name="cornerSizeTopLeft">0dp</item>
@@ -103,7 +103,7 @@
         <item name="backgroundColor">@color/cardBg</item>
     </style>
     <style name="AllCard" parent="@style/Widget.MaterialComponents.CardView">
-        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay.MaterialCardView.Cut
+        <item name="shapeAppearanceOverlay">@style/cardCorner
         </item>
         <item name="cardBackgroundColor">@color/cardBg</item>
         <item name="backgroundColor">@color/cardBg</item>
