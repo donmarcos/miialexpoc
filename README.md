@@ -1,13 +1,9 @@
 
 <table>
   <tr>
-   <td colspan="3" valign="top"><img src="screenshots/miiadiagram.png?xxx" ></td>
-  </tr>
-  <tr>
     <td>Login Screen </td>
      <td>Sign Up</td>
      <td>Charts</td>
-	 
   </tr>
   <tr>
     <td valign="top"><img src="screenshot/LoginPageWithGIF.png" ></td>
@@ -26,7 +22,6 @@
     <td valign="top"><img src="screenshot/Text Chat.png" ></td>
     <td valign="top"><img src="screenshot/Voice Chat.png" ></td>
     <td valign="top"></td>
-    
   </tr>
  </table>
 
