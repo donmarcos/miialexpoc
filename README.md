@@ -6,9 +6,9 @@
      <td>Charts</td>
   </tr>
   <tr>
-    <td valign="top"><img src="screenshot/LoginPageWithGIF.png" ></td>
-    <td valign="top"><img src="screenshot/SignUpPage.png" ></td>
-    <td valign="top"><img src="screenshot/MainActivity XML.png" ></td>
+    <td valign="top"><img src="screenshot/login.PNG" ></td>
+    <td valign="top"><img src="screenshot/signup.PNG" ></td>
+    <td valign="top"><img src="screenshot/main.PNG" ></td>
     
   </tr>
   <tr>
@@ -17,8 +17,8 @@
 	 <td></td>
   </tr>
   <tr>
-    <td valign="top"><img src="screenshot/Text Chat.png" ></td>
-    <td valign="top"><img src="screenshot/Voice Chat.png" ></td>
+    <td valign="top"><img src="screenshot/textchat.PNG" ></td>
+    <td valign="top"><img src="screenshot/voicechat.PNG" ></td>
     <td valign="top"></td>
   </tr>
  </table>
