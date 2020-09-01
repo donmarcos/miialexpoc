@@ -11,8 +11,6 @@
     <td valign="top"><img src="screenshot/MainActivity XML.png" ></td>
     
   </tr>
- </table>
-<table>
   <tr>
 	 <td>Vitals Lex Bot text </td>
 	 <td>Vitals Lex Bot voice</td>
