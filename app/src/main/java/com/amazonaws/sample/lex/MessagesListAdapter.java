@@ -16,6 +16,7 @@
 package com.amazonaws.sample.lex;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -30,6 +31,7 @@ public class MessagesListAdapter extends BaseAdapter {
     public MessagesListAdapter(Context context) {
         this.context = context;
         count = Conversation.getCount();
+        Log.i("Context is: ", String.valueOf(context));
         layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
 

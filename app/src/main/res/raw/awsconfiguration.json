@@ -19,7 +19,7 @@
     },
     "Lex": {
         "OrderFlowers_dev": {
-            "Name": "OrderFlowers_dev",
+            "Name": "miiahealthcheck_dev",
             "Alias": "$LATEST",
             "Region": "us-west-2"
         }

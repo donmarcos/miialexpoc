@@ -136,7 +136,7 @@
 				"Runtime": "nodejs10.x",
 				"Timeout": "300",
 				"Code": {
-					"S3Bucket": "amplify-maolexsample-master-120318-deployment",
+					"S3Bucket": "amplify-maolexsample-dev-210526-deployment",
 					"S3Key": "amplify-builds/maoLexsample-46663837564f46486444-build.zip"
 				}
 			}

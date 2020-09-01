@@ -10,6 +10,19 @@
 			"service": "Lex",
 			"providerPlugin": "awscloudformation",
 			"build": true
+		},
+		"lex3910afb1": {
+			"service": "Lex",
+			"providerPlugin": "awscloudformation",
+			"build": true
+		}
+	},
+	"function": {
+		"maolexsamplec0cad1e8": {
+			"build": true,
+			"providerPlugin": "awscloudformation",
+			"service": "Lambda",
+			"dependsOn": []
 		}
 	}
 }

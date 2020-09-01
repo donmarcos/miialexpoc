@@ -1,0 +1,25 @@
+{
+    "resourceName": "lex3910afb1",
+    "botName": "miiahealthcheck",
+    "intents": [
+        {
+            "slots": [
+                {
+                    "name": "greetings",
+                    "type": "AMAZON.US_FIRST_NAME",
+                    "prompt": "Your Name",
+                    "required": false,
+                    "customType": false
+                }
+            ],
+            "utterances": [
+                "miia"
+            ],
+            "intentName": "miiagreeting",
+            "newSlotTypes": []
+        }
+    ],
+    "outputVoice": "Joanna",
+    "sessionTimeout": 5,
+    "coppa": false
+}

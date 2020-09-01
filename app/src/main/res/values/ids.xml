@@ -10,4 +10,28 @@
     <item name="password" type="id" />
     <item name="phone_number" type="id" />
     <item name="gender" type="id" />
+    <item name="message_display_fragment" type="id" />
+    <item name="message_display_layout" type="id" />
+    <item name="text_message_layout" type="id" />
+    <item name="voice_message_layout" type="id" />
+    <item name="voice_record_button" type="id" />
+    <item name="voiceInterfaceInTextActivity" type="id" />
+    <item name="displayUserData" type="id" />
+    <item name="signup" type="id" />
+    <item name="dob" type="id" />
+    <item name="address" type="id" />
+    <item name="family_name" type="id" />
+    <item name="preferred_name" type="id" />
+    <item name="submit_signup" type="id" />
+    <item name="preferred_username" type="id" />
+    <item name="button_select_profile" type="id" />
+    <item name="button_select_text" type="id" />
+    <item name="button_select_voice" type="id" />
+    <item name="nav_toolbar" type="id" />
+    <item name="chart1" type="id"/>
+    <item name="sensor_display" type="id" />
+    <item name="profile_page_title" type="id" />
+    <item name="ninja_eyes" type="id" />
+    <item name="eyecare_layout" type="id" />
+    <item name="eyetracker_textview" type="id" />
 </resources>

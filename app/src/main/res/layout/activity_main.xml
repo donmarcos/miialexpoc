@@ -4,12 +4,8 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_intra_group_separation"
-    android:paddingLeft="@dimen/activity_intra_group_separation"
-    android:paddingRight="@dimen/activity_intra_group_separation"
-    android:paddingTop="@dimen/activity_intra_group_separation"
     android:background ="#FFFFFF">
-
-    <include layout="@layout/options" />
+    <include
+        layout="@layout/nav_drawer"/>
 
 </RelativeLayout>

@@ -1,20 +1,20 @@
 <resources>
     <string name="app_name">Lex Sample</string>
-    <string name="screen_options_main_message">Amazon Lex</string>
+    <string name="screen_options_main_message">A m a z o n \t L e x</string>
     <string name="who_are_you">Who are you?</string>
     <string name="choose">Choose what describes you best</string>
     <string name="Caregiver">Caregiver</string>
     <string name="Patient">Patient</string>
-    <string name="login">Login to your Account</string>
-    <string name="enter_id">Enter_Id_x</string>
-    <string name="enter_id_password">Enter_password_x</string>
+    <string name="login">Login to your MIIA account</string>
+    <string name="enter_id">ID</string>
+    <string name="enter_id_password">Password</string>
     <string name="Remember">Remember Me</string>
     <string name="Login1">Login</string>
     <string name="started">getting started....</string>
-    <string name="signup">Create Your Account</string>
-    <string name="enter_name">Name_X</string>
-    <string name="enter_email">Email_X</string>
-    <string name="enter_phoneNo">Phone_x</string>
+    <string name="signup">Create Your MIIA Account</string>
+    <string name="enter_name">First Name</string>
+    <string name="enter_email">Email ID</string>
+    <string name="enter_phoneNo">Phone Number</string>
     <string name="gender">Gender:</string>
     <string name="Male">Male</string>
     <string name="Female">Female</string>
@@ -34,4 +34,32 @@
     <string name="title_activity_signup" />
     <string name="previous" />
     <string name="action_settings" />
+    <string-array name="gender">
+        <item>Male</item>
+        <item>Female</item>
+        <item>Other</item>
+        <item>Prefer not to say</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="voice_button">Voice Button</string>
+    <string name="voice">Voice</string>
+    <string name="enter_dob">"Date of Birth "</string>
+    <string name="enter_address">Address</string>
+    <string name="Family_Name">Family Name</string>
+    <string name="Preferred_Username">Preferred Username</string>
+    <string name="voice_button_text">Voice Chat</string>
+    <string name="text_button_text">Text Chat</string>
+    <string name="profile">Profile</string>
+    <string name="backgroundimage">BackgroundImage</string>
+    <string name="new_sign_up">New to MIIA? \n Sign up!</string>
+    <string name="username">Username</string>
+    <string name="type_here">Type here..</string>
+    <string name="transcript">Transcript:</string>
+    <string name="transcript_placeholder">Transcript Placeholder</string>
+    <string name="response_as_text">Response as text:</string>
+    <string name="response_placeholder">Response Placeholder</string>
+    <string name="eyes">eyes</string>
+    <string name="test_your_eyes">Test your eyes!</string>
+    <string name="yo_wassup">Yo! Wassup!</string>
 </resources>

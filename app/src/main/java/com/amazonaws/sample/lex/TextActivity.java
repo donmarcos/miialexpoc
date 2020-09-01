@@ -28,8 +28,8 @@ import com.amazonaws.mobile.client.AWSMobileClient;
 import com.amazonaws.mobile.client.Callback;
 import com.amazonaws.mobile.client.UserStateDetails;
 import com.amazonaws.mobileconnectors.lex.interactionkit.InteractionClient;
-import com.amazonaws.mobileconnectors.lex.interactionkit.config.InteractionConfig;
 import com.amazonaws.mobileconnectors.lex.interactionkit.Response;
+import com.amazonaws.mobileconnectors.lex.interactionkit.config.InteractionConfig;
 import com.amazonaws.mobileconnectors.lex.interactionkit.continuations.LexServiceContinuation;
 import com.amazonaws.mobileconnectors.lex.interactionkit.listeners.AudioPlaybackListener;
 import com.amazonaws.mobileconnectors.lex.interactionkit.listeners.InteractionListener;
@@ -39,11 +39,26 @@ import com.amazonaws.services.lexrts.model.DialogState;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.DataOutputStream;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.text.DateFormat;
+import java.util.Arrays;
+import java.util.Calendar;
 import java.util.Date;
+import java.util.Objects;
+
 
 public class TextActivity extends Activity {
     private static final String TAG = "TextActivity";
+    private BufferedWriter bufferedWriter;
+
+    private FileReader fileReader;
+
     /**
      * Implementing {@link AudioPlaybackListener}.
      */
@@ -119,17 +134,24 @@ public class TextActivity extends Activity {
         Log.d(TAG, "Initializing text component: ");
         userTextInput = (EditText) findViewById(R.id.userInputEditText);
 
-        // Set text edit listener.
-        userTextInput.setOnKeyListener(new View.OnKeyListener() {
-            @Override
-            public boolean onKey(View v, int keyCode, KeyEvent event) {
-                if ((event.getAction() == KeyEvent.ACTION_DOWN)
-                        && (keyCode == KeyEvent.KEYCODE_ENTER)) {
-                    textEntered();
-                    return true;
-                }
-                return false;
+        try {
+            File file = new File(getApplicationContext().getFilesDir().getPath() + "\\data.csv");
+            FileWriter fileWriter = new FileWriter(file.getAbsoluteFile());
+            bufferedWriter = new BufferedWriter(fileWriter);
+            bufferedWriter.write(Calendar.getInstance().getTime() + ",");
+        }
+        catch (IOException io){
+            Log.e("IO EXCEPTION", Arrays.toString(io.getStackTrace()));
+        }
+
+        // Set text edit listener. LAMBDA form
+        userTextInput.setOnKeyListener((v, keyCode, event) -> {
+            if ((event.getAction() == KeyEvent.ACTION_DOWN)
+                    && (keyCode == KeyEvent.KEYCODE_ENTER)) {
+                textEntered();
+                return true;
             }
+            return false;
         });
         userTextInput.setEnabled(false);
 
@@ -197,13 +219,15 @@ public class TextActivity extends Activity {
         });
     }
 
+    private int counter = 0;
+
     /**
      * Read user text input.
      */
     private void textEntered() {
         String text = userTextInput.getText().toString();
 
-        if (text == null || text.trim().equals("")) {
+        if (text.trim().equals("")) {
             Log.d(TAG, "text null or empty");
             return;
         }
@@ -211,16 +235,93 @@ public class TextActivity extends Activity {
         if (!inConversation) {
             Log.d(TAG, " -- New conversation started");
             startNewConversation();
+            ++counter;
             addMessage(new TextMessage(text, "tx", getCurrentTimeStamp()));
             lexInteractionClient.textInForTextOut(text, null);
             inConversation = true;
         } else {
             Log.d(TAG, " -- Responding with text: " + text);
+
+        // THIS IS THE CODE SECTION THAT WRITES THE USER-PROVIDED DATA INTO A CSV FILE
+            try {
+                switch(counter){
+                    case 2: // record systolic bp
+                        Log.i("COUNTER 2", "RECORDING UPPER BP: "+text);
+                        bufferedWriter.write(text+",");
+                        break;
+                    case 3: //record diastolic bp
+                        bufferedWriter.write(text+",");
+                        Log.i("COUNTER 3", "RECORDING LOWER BP: "+text);
+                        break;
+                    case 4: // record sugar level
+                        bufferedWriter.write(text+",");
+                        Log.i("COUNTER 4", "RECORDING SUGAR: "+text);
+                        break;
+                    case 5: // record temperature
+                        bufferedWriter.write(text);
+                        Log.i("COUNTER 5", "RECORDING TEMPERATURE: "+text);
+                        break;
+                    default:
+                        Log.i("LOG USER DATA IN MEMORY", "Let's  break now. Default condition reached!");
+                }
+            }
+            catch (Exception io){Log.i("IO/EXCEPTION", Arrays.toString(io.getStackTrace()));}
+            counter += 1;
+        // --- SECTION FOR FILE WRITE ENDS HERE --- //
+
+        // --- READ THE FILE ONCE THE WRITE HAS BEEN DONE --- //
+            if (counter > 5)
+                readFile();
+        // --- SECTION FOR FILE READ ENDS HERE --- //
+
             addMessage(new TextMessage(text, "tx", getCurrentTimeStamp()));
             convContinuation.continueWithTextInForTextOut(text);
+            Log.i("\nSERVER RESPONSE\n", convContinuation.getSessionAttribute("response") != null ? "NO SUCH RESPONSE!" : "RESPONSE: " + convContinuation.getSessionAttributes() );
         }
         clearTextInput();
     }
+
+    private void readFile(){
+        try{
+            bufferedWriter.close();
+            BufferedReader bufferedReader = new BufferedReader(new FileReader(getApplicationContext().getFilesDir().getPath() + "\\data.csv"));
+            Log.d("\nLINES IN THE USER FILE", bufferedReader.readLine());
+            bufferedReader.close();
+            
+        }
+        catch (IOException io){ Log.e("IO EXCEPTION", Arrays.toString(io.getStackTrace())); }
+    }
+
+    /**
+     * ASSIGNS READ AND WRITE PERMISSION TO THE OWNER OF THE CSV FILE AND ONLY READ PERMISSIONS
+     * TO ANY OTHER USER
+     * */
+ /*
+     private void assignPermissions(){
+        Process process = null;
+        DataOutputStream dataOutputStream = null;
+
+        try {
+            process = Runtime.getRuntime().exec("su");
+            dataOutputStream = new DataOutputStream(process.getOutputStream());
+            dataOutputStream.writeBytes("chmod 777 D:\\AWSHackathon\\miialexpoc-dev\\cache\\user_data.csv" + "\n");
+            dataOutputStream.writeBytes("exit\n");
+            dataOutputStream.flush();
+            process.waitFor();
+        } catch (Exception e) {
+            Log.i("ERROR!", Arrays.toString(e.getStackTrace()));
+        } finally {
+            try {
+                if (dataOutputStream != null) {
+                    dataOutputStream.close();
+                    process.destroy();
+                }
+            } catch (Exception e) {
+                Log.i("ERROR!", Arrays.toString(e.getStackTrace()));
+            }
+        }
+    }
+*/
 
     /**
      * Pass user input to Lex client.
@@ -257,7 +358,7 @@ public class TextActivity extends Activity {
     private void addMessage(final TextMessage message) {
         Conversation.add(message);
         final MessagesListAdapter listAdapter = new MessagesListAdapter(getApplicationContext());
-        final ListView messagesListView = (ListView) findViewById(R.id.conversationListView);
+        final ListView messagesListView = findViewById(R.id.conversationListView);
         messagesListView.setDivider(null);
         messagesListView.setAdapter(listAdapter);
         messagesListView.setSelection(listAdapter.getCount() - 1);
